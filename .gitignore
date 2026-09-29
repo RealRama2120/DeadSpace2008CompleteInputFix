@@ -1,0 +1,17 @@
+build/
+dist/
+/test-artifacts/
+.vs/
+*.obj
+*.user
+*.log
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.exe
+*.dll
+*.sav
+*.dmp
+*.tmp
+*.bak

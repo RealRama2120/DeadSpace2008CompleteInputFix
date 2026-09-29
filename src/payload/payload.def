@@ -1,0 +1,5 @@
+LIBRARY "DeadSpaceCompleteInputFix"
+
+EXPORTS
+    DCIF_Initialize=_DCIF_Initialize@0 @1
+
