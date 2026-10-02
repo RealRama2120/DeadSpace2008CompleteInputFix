@@ -1,5 +1,5 @@
 DEAD SPACE COMPLETE INPUT FIX
-Release candidate 1 by Rama2120
+Release 1.0.0 by Rama2120
 
 WHAT IT DOES
 
@@ -51,8 +51,8 @@ COMPATIBILITY AND SAFETY
 KNOWN LIMITATIONS
 
 - Standard mouse camera behavior is gameplay-verified. Zero-G retains the
-  recovered reference scaling but was not separately subjectively tested; it is
-  deferred to later gameplay and compatibility feedback.
+  recovered reference scaling. I played through all of the game's zero-G sections with this mod installed; a separate dedicated side-by-side comparison against reference behavior hasn't been done.
+  
 - Dead Space's occasional incorrect input-prompt edge case remains vanilla. It
   was not reproduced reliably enough to justify a fragile UI hook.
 - Controller button remapping is outside this mod's scope.
