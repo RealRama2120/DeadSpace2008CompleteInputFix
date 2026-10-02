@@ -41,8 +41,7 @@ COMPATIBILITY AND SAFETY
 - Fully runtime-tested on the canonical EA App executable build 1.0.0.222.
 - Standalone operation and coexistence with Rama2120's Stability Patch, Texture
   Compatibility, 4GB runtime component, and ReShade stack were tested.
-- Steam uses the same normal installation layout but has not yet received a
-  separate runtime-validation pass.
+- Steam uses the same normal installation layout, and the mod has been tested working on Steam as well as on the EA App release.
 - Unsupported or changed mouse signatures fail closed and leave mouse camera
   behavior vanilla. The bootstrap also forwards Windows VERSION functions and
   allows the game to start safely if the payload cannot be loaded.
