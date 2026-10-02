@@ -27,14 +27,14 @@ no interference with other mods.
 
 ## Status and verification
 
-This tree contains a hardened EA-build release candidate. The accepted
+This tree contains the released version. The accepted
 controller candidate uses a `0.11` physical cutoff and the exact inverse of
-Dead Space's verified 26.52% radial response. The mouse implementation has
-passed build, signature, transform, launch, raw-input, standard-camera-call,
-subjective standard-camera, and mixed-input coexistence checks. Mixed-input
-coexistence (Phase 5) is accepted. Explicit zero-G mouse feel, broader
-controller coverage, and Steam testing remain future compatibility work, not
-release blockers.
+Dead Space's verified 26.52% radial response. The mouse implementation has passed build, signature, transform, launch, raw-input, standard-camera-call, subjective standard-camera, and mixed-input coexistence checks. I (Rama2120) manually test every release. I have played through the entire game with recent versions of all my Dead Space (2008) mods installed together, including this input fix, with no input or camera issues.
+
+Mixed-input
+coexistence (Phase 5) is accepted. Zero-G sections were covered in post-release gameplay validation (2026-09-03) with no reported input or camera issues. Steam-storefront testing is the only remaining compatibility item.
+
+
 
 ## Install
 
