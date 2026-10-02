@@ -99,7 +99,7 @@ camera counter first reached `200/200`: 200 nonzero standard-camera calls and
 three signed call sites without a crash; the later summary reached
 `standard=1815/1815`, `zero_primary=504/657`, and `zero_vertical=463/657`.
 The numerator is a successful raw override and the denominator is total calls.
-The tester reported no untouched drift, immediate slow movement, materially less
+I (Rama2120) reported no untouched drift, immediate slow movement, materially less
 acceleration/strangeness, consistent turn distance for slow and fast sweeps,
 similar horizontal and vertical response, normal aiming and diagonals, and
 unchanged controller behavior. This promotes the standard raw-camera path to a
@@ -109,7 +109,7 @@ feedback: revisit the zero-G path if personal gameplay or a Nexus report
 identifies a problem.
 
 The menu cursor still felt much faster and more disconnected than the in-game
-camera. The tester clarified that this was already true in vanilla. That agrees
+camera. I (Rama2120) clarified that this was already true in vanilla. That agrees
 with the implementation and runtime evidence: the experiment observes but does
 not transform DirectInput mouse samples in menus, and no camera call was
 overridden at the title or main menu. No menu compensation will be added.
