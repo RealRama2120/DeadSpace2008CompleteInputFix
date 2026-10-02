@@ -118,7 +118,7 @@ was intentionally left untouched. Full evidence is preserved in
 ## Remaining compatibility coverage
 
 - Steam executable and runtime testing when that installation becomes available.
-- The narrow mixed-input stress pass in `COEXISTENCE_TEST.md`.
+- The mixed-input stress pass in COEXISTENCE_TEST.md passed on 2026-08-31.
 - Additional controller models through later compatibility feedback; the
   current zero-configuration default is intentionally conservative and already
   accepted on the measured controller.
@@ -135,7 +135,7 @@ variation in that run was the game's unmodified response, not a fix effect.
   magnitude band (`9.8%` to `14.2%`). Exact correspondence to visible camera
   onset remains subjective because the diagnostic log has no access to camera
   state.
-- The tester reported a noticeable dead zone, no obvious onset jump, normal
+- I (Rama2120) reported a noticeable dead zone, no obvious onset jump, normal
   aiming, and no noticeable diagonal difference.
 
 This evidence supports a deliberately narrow API-layer experiment: discard the
@@ -156,7 +156,7 @@ logged:
 - five-second raw idle maximum `(2809, 254)`, radial magnitude `2820` (about
   `8.6%`).
 
-The tester reported:
+I (Rama2120) reported:
 
 - no camera drift while untouched;
 - a smaller perceived dead zone;
