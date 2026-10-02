@@ -65,7 +65,7 @@ later sensitivity processing is:
 
 The earlier 0.14 anti-deadzone was therefore always below the game's threshold.
 It improved onset only by advancing input toward that threshold, which explains
-why the tester continued to feel more vertical travel in both earlier enabled
+why I (Rama2120) continued to feel more vertical travel in both earlier enabled
 profiles.
 
 ## Candidate response shape
