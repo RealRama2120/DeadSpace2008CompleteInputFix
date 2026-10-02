@@ -1,62 +1,78 @@
-# DEAD SPACE COMPLETE INPUT FIX
+# Dead Space (2008) Complete Input Fix
 
-Standalone Dead Space (2008) input-modernization project by Rama2120.
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Windows-0078D6)
+![Game](https://img.shields.io/badge/game-Dead%20Space%20(2008)-c41e1f)
 
-This tree currently contains a hardened EA-build release candidate, not a
-Nexus-ready public package. Its scope is deliberately limited to:
+**A standalone input-modernization mod for Dead Space (2008) on PC.**
+It fixes the game's aging input stack where it matters: a measured right-stick
+response curve that removes the oversized dead zone without introducing drift,
+and a raw-mouse camera implementation for precise aiming. Everything happens at
+the XInput boundary — no external config menus, no unrelated dependencies, and
+no interference with other mods.
 
-- a complete x86 `version.dll` forwarding/bootstrap test;
-- a uniquely named payload;
-- validated, chain-preserving `XInputGetState` observation;
-- bounded controller diagnostics;
-- one measured radial right-stick release candidate; and
-- one fail-closed raw-mouse camera implementation for the canonical EA build.
+## What it does
 
-The mouse implementation has passed local build, signature, transform, launch,
-raw-input, standard-camera-call, subjective standard-camera, and mixed-input
-coexistence checks. Explicit zero-G feel remains deferred to future
-compatibility feedback.
+- **Controller:** validated `XInputGetState` observation with a measured radial
+  right-stick transform. Reduces the perceived dead zone with no reported
+  drift, onset jump, aiming or diagonal regression, and no loss of full-stick
+  speed. Preserves the full XInput square outer range.
+- **Mouse:** fail-closed raw-mouse camera implementation. Substitutes raw
+  relative deltas only at the validated camera calls — menus and DirectInput
+  polling stay intact, and controller-only camera calls stay vanilla.
+- **Safe by design:** complete x86 `version.dll` forwarding, uniquely named
+  payload, chain-preserving hooks, bounded diagnostics (periodic diagnostics
+  are off for normal users), and clean-stack operation verified on the EA
+  build.
 
-The first controlled gameplay comparison supports keeping the controller fix at
-the XInput boundary: the measured radial transform reduced the perceived
-right-stick dead zone without reported drift, onset jump, aiming or diagonal
-regression, or loss of full-stick speed. Clean-stack EA operation is now
-verified. The accepted controller candidate uses a `0.11` physical cutoff and
-the exact inverse of Dead Space's verified 26.52% radial response, while
-preserving the full XInput square outer range. The first mouse experiment keeps
-menus and DirectInput polling intact, substitutes raw relative deltas only at
-the three validated camera calls, and leaves controller-only camera calls
-vanilla. Broader controller coverage, Steam testing, and explicit zero-G mouse
-feel remain compatibility coverage rather than v1.0 blockers; standard mouse
-behavior is now the Phase 4 release candidate.
+## Status and verification
 
-Phase 5 mixed-input coexistence is accepted. Periodic diagnostics are disabled
-for normal users, including when the INI is absent; concise initialization and
-failure logging remains available for support. The un-reproduced input-prompt
-edge case is deferred rather than expanded into a fragile UI hook.
+This tree contains a hardened EA-build release candidate. The accepted
+controller candidate uses a `0.11` physical cutoff and the exact inverse of
+Dead Space's verified 26.52% radial response. The mouse implementation has
+passed build, signature, transform, launch, raw-input, standard-camera-call,
+subjective standard-camera, and mixed-input coexistence checks. Mixed-input
+coexistence (Phase 5) is accepted. Explicit zero-G mouse feel, broader
+controller coverage, and Steam testing remain future compatibility work, not
+release blockers.
 
-Build with:
+## Install
+
+1. Copy the two runtime DLLs and the INI from the release archive beside
+   `Dead Space.exe`.
+2. Launch the game normally. No configuration is required.
+3. To uninstall, remove the mod's DLLs and INI.
+
+## Build from source
+
+On Windows with Visual Studio C++ build tools and PowerShell:
 
 ```powershell
 .\build.ps1
 ```
 
-Artifacts are written to `build\Release`. See `docs\ARCHITECTURE.md` and
-`docs\VERIFICATION.md` for the current evidence and remaining runtime tests.
-The exact controller comparison profiles and procedure are in
-`build\ControllerComparison` and `docs\CONTROLLER_COMPARISON.md`.
-The mouse reverse-engineering and live-test evidence is in
-`docs\MOUSE_INVESTIGATION.md`.
-The exact vanilla/raw mouse A/B pair is in `build\MouseComparison` with its
-procedure in `docs\MOUSE_COMPARISON.md`.
-The final mixed-input gameplay pass is in `docs\COEXISTENCE_TEST.md`.
-
-Create the audited local release-candidate archive with:
+Artifacts are written to `build\Release`. Create the audited release archive
+with:
 
 ```powershell
 .\package.ps1
 ```
 
-The packager accepts only the two runtime DLLs, the public-default INI, and the
-end-user README. It verifies staged hashes, ZIP entries, non-empty contents, and
-writes a SHA-256 sidecar under `dist`. Public upload remains a separate step.
+The packager accepts only the two runtime DLLs, the public-default INI, and
+the end-user README. It verifies staged hashes and ZIP entries and writes a
+SHA-256 sidecar under `dist`.
+
+## Documentation
+
+- `docs/ARCHITECTURE.md` — design and evidence
+- `docs/VERIFICATION.md` — verification status and remaining runtime tests
+- `docs/CONTROLLER_COMPARISON.md` — controller profiles and comparison procedure
+- `docs/MOUSE_INVESTIGATION.md` — mouse reverse-engineering and live-test evidence
+- `docs/MOUSE_COMPARISON.md` — vanilla/raw mouse A/B procedure
+- `docs/COEXISTENCE_TEST.md` — mixed-input gameplay pass
+
+## Credits and licensing
+
+Created by Rama2120.
+
+MIT licensed — see [LICENSE](LICENSE).
