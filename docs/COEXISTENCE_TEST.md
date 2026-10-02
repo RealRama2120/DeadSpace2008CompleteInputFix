@@ -1,6 +1,6 @@
 # Phase 5 mixed-input test
 
-Status: passed on 2026-08-31. The tester had already exercised both input paths
+Status: passed on 2026-08-31. I (Rama2120) had already exercised both input paths
 and reported that all switching behavior seemed normal. No stuck controller,
 corrupted mouse path, or menu-state problem was reported.
 
