@@ -1,6 +1,6 @@
 # Building Dead Space Complete Input Fix
 
-The newest locally evidenced version is **v1.0.0-rc1**. Its browsable C++
+The newest locally evidenced version is **v1.0.0**. Its browsable C++
 source, tests, configuration, and build scripts are at the repository root.
 
 ## Requirements
@@ -48,7 +48,7 @@ to be skipped. Use `-SkipTests` when only a compile is wanted:
 After building, create a new audited package with:
 
 ```powershell
-.\package.ps1 -Version 1.0.0-rc1
+.\package.ps1 -Version 1.0.0
 ```
 
 The packager accepts only `version.dll`, `DeadSpaceCompleteInputFix.dll`,
