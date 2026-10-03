@@ -4,7 +4,7 @@
 
 # Dead Space (2008) Complete Input Fix
 
-![License](https://img.shields.io/badge/license-MIT-green)
+![Version](https://img.shields.io/badge/version-1.0.0-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6)
 ![Game](https://img.shields.io/badge/game-Dead%20Space%20(2008)-c41e1f)
 
@@ -45,7 +45,7 @@ coexistence (Phase 5) is accepted. Zero-G sections were covered in post-release 
 1. Copy the two runtime DLLs and the INI from the release archive beside
    `Dead Space.exe`.
 2. Launch the game normally. No configuration is required.
-3. To uninstall, remove the mod's DLLs and INI.
+3. To uninstall, remove the mod's DLLs, INI, and README.
 
 ## Build from source
 
