@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/social-preview.png" width="480" alt="Dead Space Complete Input Fix">
+</p>
+
 # Dead Space (2008) Complete Input Fix
 
 ![License](https://img.shields.io/badge/license-MIT-green)
